@@ -134,7 +134,11 @@ class DamageCalculate extends JFrame{
 			calculator1.setStrong(strong);
 			calculator1.setEli_times(eli_times);
 			
-			field18.setText(String.format("%.3f", calculator1.getDamage()));
+			Font f = new Font("Rockwell Extra Bold", Font.BOLD, 40);
+			
+			field18.setText(String.format("%.3f Damage", calculator1.getDamage()));
+			field18.setFont(f);
+			field18.setForeground(Color.RED);
 		}
 	}
 	
