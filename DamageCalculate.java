@@ -6,6 +6,17 @@ class DamageCalculate extends JFrame{
 	
 	Calculator calculator1 = new Calculator();
 	
+	Object[] raceImage = {
+			new ImageIcon("god.jpg"),
+			new ImageIcon("devil.jpg"),
+			new ImageIcon("human.jpg"),
+			new ImageIcon("beast.jpg"),
+			new ImageIcon("dragon.jpg"),
+			new ImageIcon("elf.jpg")
+	};
+  
+	String race[] = {"GOD","Devil","Human","Beast","Dragon","Elf"};
+	
 	JLabel label1 = new JLabel("Leader:");
 	JLabel label2 = new JLabel("times");
 	JLabel label3 = new JLabel("Vice-Leader:");
@@ -24,6 +35,8 @@ class DamageCalculate extends JFrame{
 	JPanel panel4 = new JPanel();
 	JPanel panel5 = new JPanel();
 	JPanel panel6 = new JPanel();
+	
+	JPanel descriptionPanel = new JPanel();
 	
 	//Leader
 	JTextField field11 = new JTextField(10);
@@ -45,12 +58,11 @@ class DamageCalculate extends JFrame{
 	JButton buttonC = new JButton("Calculate");
 	JButton buttonR = new JButton("Clear");
 	
-	String race[] = {"GOD","Devil","Human","Beast","Dragon","Elf"};
-	
-	JComboBox<String> comboBox1 = new JComboBox<String>(race);
-	JComboBox<String> comboBox2 = new JComboBox<String>(race);
+	JComboBox<Object> comboBox1 = new JComboBox<Object>(raceImage);
+	JComboBox<Object> comboBox2 = new JComboBox<Object>(raceImage);
 	
 	public DamageCalculate(){
+		
 		
 		panel1.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 20));
 		panel2.setLayout(new FlowLayout(FlowLayout.LEFT, 10, 20));
